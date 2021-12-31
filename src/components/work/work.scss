@@ -1,0 +1,90 @@
+@import "../../global.scss";
+
+.work {
+  width: 80%;
+  margin: auto;
+  margin-top: 1vh;
+
+  .name,
+  .logo {
+    margin: auto;
+  }
+
+  .name {
+    color: $color4;
+    margin-bottom: 2%;
+    font-size: 0.9vw;
+    cursor: default;
+  }
+
+  .img {
+    cursor: pointer;
+  }
+
+  .logo {
+    width: 35%;
+  }
+
+  .no-display {
+    display: none;
+  }
+
+  .content {
+    padding: 1% 0;
+    cursor: default;
+
+    .tech-stack {
+      margin-top: 2%;
+      width: 100%;
+
+      img {
+        width: 9%;
+        padding: 0 1%;
+        height: 4vh;
+      }
+    }
+
+    .description {
+      color: $color4;
+      padding: 3%;
+      font-size: 0.85vw;
+      text-align: left;
+
+      span:not(.ignore) {
+        font-weight: bold;
+        text-decoration: underline;
+      }
+
+      .clickable {
+        cursor: pointer;
+      }
+    }
+
+    .job,
+    .project {
+      margin-top: 1%;
+
+      div {
+        color: whitesmoke;
+        display: inline-block;
+        padding: 2% 5%;
+        background-color: $color2;
+        margin: 0 1%;
+        font-size: 0.9vw;
+      }
+
+      .no-display {
+        display: none;
+      }
+    }
+
+    .project {
+      div {
+        border-radius: 100px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

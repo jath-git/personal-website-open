@@ -1,0 +1,60 @@
+@import "../../global.scss";
+
+// intentionally put style at top for sed command to find this first
+.contact {
+  .footer {
+    bottom: calc(4 * (-93vh));
+  }
+}
+
+.contact {
+  background-color: $color5;
+
+  .header4 {
+    color: $color5;
+    background-color: $color4;
+
+    &:hover {
+      color: $color4;
+    }
+  }
+
+  .navigation {
+    background-color: whitesmoke;
+    width: 75%;
+    margin: auto;
+    padding: 5vh 0;
+    margin-top: 17.5vh;
+    text-align: center;
+
+    img {
+      width: 8vw;
+      display: inline-block;
+      padding: 0 4vw;
+
+      &:hover {
+        cursor: copy;
+      }
+    }
+  }
+
+  .footer {
+    width: 100%;
+    height: 6vh;
+    background-color: $color4;
+    position: absolute;
+
+    .text {
+      color: $color5;
+      text-align: center;
+      font-size: 1vw;
+      cursor: default;
+      transform: translateY(1vh);
+      text-transform: uppercase;
+
+      .copyright {
+        width: 1rem;
+      }
+    }
+  }
+}

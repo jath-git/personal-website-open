@@ -1,0 +1,31 @@
+$color1: #082c6c;
+$color2: #325677;
+$color3: #ecd082;
+$color4: #303030;
+$color5: #878683;
+$color6: #183d7e;
+$width: 775px;
+
+.header1,
+.header2,
+.header3,
+.header4 {
+  cursor: default;
+  margin: auto;
+  margin-top: 7.5vh;
+  font-size: 4vw;
+  text-align: center;
+  width: 30vw;
+  text-transform: uppercase;
+  font-weight: 500;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+@mixin mobile {
+    @media (max-width: #{$width}){
+        @content
+    }
+}

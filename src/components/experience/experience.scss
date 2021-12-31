@@ -1,0 +1,78 @@
+@import "../../global.scss";
+
+.experience {
+  text-align: center;
+  background-color: $color4;
+
+  .header3 {
+    color: $color4;
+    background-color: $color5;
+  
+    &:hover {
+      background-color: $color4;
+      color: $color5;
+    }
+  }
+  
+  .slider-two {
+    display: inline-block;
+    width: 25%;
+    height: 70vh;
+    margin: auto;
+    margin-top: 2vh;
+    position: relative;
+    box-shadow: black;
+    border: solid $color4 1px;
+
+    .right {
+      margin-right: 0;
+    }
+
+    .slide,
+    .active-slide {
+      background-color: white;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      opacity: 0;
+      transition: opacity ease-in-out 0.4s;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .active-slide {
+      opacity: 1;
+    }
+
+    .dots {
+      position: absolute;
+      bottom: 1.2vh;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+
+      .dot,
+      .active-dot {
+        width: 1.05vw;
+        height: 2vh;
+        border-radius: 50%;
+        border: 3px solid inherit;
+        margin: 0 0.35vw;
+        background-color: $color4;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .active-dot {
+        background: $color3;
+      }
+    }
+  }
+  background-color: transparent;
+}

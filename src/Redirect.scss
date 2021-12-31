@@ -1,0 +1,43 @@
+@import "./global.scss";
+
+.redirect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $color5;
+    width: 100vw;
+    height: 100vh;
+
+    .message-container {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 75%;
+        text-align: center;
+
+        .circle {
+            height: 15vh;
+            animation: circulate 3s linear infinite;
+            animation-delay: 1s;
+        }
+
+        @keyframes circulate {
+            100% {
+                transform: rotate(-360deg);
+            }
+        }
+
+        .message {
+            background-color: $color2;
+            color: whitesmoke;
+            padding: 3% 5%;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 2rem;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+    }
+}

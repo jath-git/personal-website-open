@@ -1,0 +1,172 @@
+@import "../../global.scss";
+
+.about {
+  background-color: $color2;
+  .header1 {
+    color: $color2;
+    background-color: $color5;
+    &:hover {
+      color: $color5;
+    }
+  }
+
+  .v-center {
+    transform: translateY(10vh);
+
+    .left,
+    .right {
+      width: 50%;
+      display: inline-block;
+      cursor: default;
+    }
+
+    .wrapper {
+      h1 {
+        color: transparent;
+        -webkit-text-stroke: 0.2vw $color5;
+        text-transform: uppercase;
+        background-color: $color2;
+
+        &:hover {
+          color: $color3;
+          -webkit-text-stroke: 0.2vw $color4;
+        }
+      }
+    }
+    
+    .final {
+      width: 100%;
+      margin-top: 3%;
+
+      .btn {
+        border-radius: 50px;
+        margin: auto;
+        font-size: 1.3vw;
+        padding: 1%;
+        text-align: center;
+        width: 50%;
+        padding: 2.5%;
+        cursor: pointer;
+        background-color: $color5;
+        -webkit-text-stroke: 0.1vw $color2;
+        color: $color2;
+
+        &:hover {
+          -webkit-text-stroke: 0.1vw $color4;
+          color: $color4;
+          background-color: $color3;
+        }
+
+        .icon {
+          margin-right: 1.5%;
+          width: 2vw;
+        }
+      }
+    }
+
+    .left {
+      .wrapper {
+        margin-left: 25%;
+        width: 32.5vw;
+        h1 {
+          font-size: 3.5vw;
+        }
+        h2 {
+          padding: 1%;
+          margin: 1% 0;
+          font-weight: normal;
+          font-size: 1.1vw;
+          color: $color5;
+          background-color: $color4;
+
+          span {
+            padding: 0 1.5%;
+            background-color: $color3;
+            color: $color5;
+            text-transform: uppercase;
+            -webkit-text-stroke: 0.1vw $color4;
+          }
+
+          span:hover {
+            background-color: $color2;
+            -webkit-text-stroke: 0.1vw $color5;
+          }
+        }
+      }
+    }
+
+    .right {
+      float: right;
+
+      .wrapper {
+        width: 40.5vw;
+        h1 {
+          font-size: 3.2vw;
+        }
+      }
+      .container {
+        margin: 1vh 1vw;
+
+        // .skillbar {
+        //   margin-top: 1vh;
+        //   width: 100%;
+        //   text-align: center;
+        // }
+
+        .skillbar-container {
+          margin-bottom: 1.5vh;
+
+          .skill {
+            width: 20%;
+            background-color: $color4;
+            padding: 0.6vw 0;
+            text-align: center;
+            color: $color5;
+            border-radius: 3px;
+            float: left;
+            font-size: 0.65vw;
+            font-weight: 750;
+          }
+
+          .space {
+            float: right;
+            width: 80%;
+            background-color: whitesmoke;
+            border-radius: 3px;
+
+            .bar {
+              background-color: $color5;
+              text-align: right;
+
+              div {
+                padding: 0.6vw;
+                padding-right: 0.75vw;
+                font-size: 0.65vw;
+                color: $color4;
+              }
+            }
+          }
+
+          &:hover {
+            .skill {
+              background-color: transparent;
+              font-size: 1vw;
+              padding: 0.4vw 0;
+              text-transform: uppercase;
+              -webkit-text-stroke: 0.05vw $color4;
+              color: $color3;
+            }
+
+            .space {
+              background-color: transparent;
+              .bar {
+                background-color: $color3;
+                border-radius: 3px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

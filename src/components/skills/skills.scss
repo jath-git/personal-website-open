@@ -1,0 +1,56 @@
+@import "../../global.scss";
+
+.skills {
+  display: flex;
+  background-color: $color5;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .header2 {
+    color: $color5;
+    background-color: $color2;
+
+    &:hover {
+      color: $color2;
+    }
+  }
+
+  .arrow {
+    height: 5vh;
+    position: absolute;
+    cursor: pointer;
+
+    &.left {
+      left: 5.25vw;
+      transform: rotateY(180deg);
+    }
+
+    &.right {
+      right: 5.25vw;
+    }
+  }
+
+  .slider {
+    height: 35vh;
+    display: flex;
+    position: absolute;
+    left: 0;
+
+    .container {
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .items {
+        height: 30vh;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        width: 75%;
+        display: flex;
+      }
+    }
+  }
+}

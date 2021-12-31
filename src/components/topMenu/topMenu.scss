@@ -1,0 +1,128 @@
+@import "../../global.scss";
+
+.topbar {
+  width: 100%;
+  height: 7vh;
+  background-color: whitesmoke;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  transition: all 1s ease;
+  &.menu-open {
+    background-color: $color4;
+    color: whitesmoke;
+  }
+  color: $color4;
+
+  .wrapper {
+    padding: 1vh 1.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+      align-items: center;
+
+      .logo {
+        font-size: 2.25vw;
+        font-weight: 700;
+        text-decoration: none;
+        color: inherit;
+        margin-right: 2vw;
+      }
+
+      .status {
+        background-color: $color3;
+        padding: 1vh 3vw;
+        color: $color4;
+
+        &:hover {
+          background-color: $color2;
+          color: whitesmoke;
+        }
+      }
+
+      .itemContainer:hover:not(&.menu-open) {
+        color: $color1;
+      }
+
+      .itemContainer,
+      .status {
+        display: flex;
+        align-items: center;
+        margin-left: 1.6vw;
+
+        .logo {
+          font-size: inherit;
+          color: inherit;
+          text-decoration: none;
+        }
+
+        .icon {
+          font-size: 0.95vw;
+          margin-right: 0.3vw;
+        }
+
+        span {
+          font-size: 0.9vw;
+          font-weight: 500;
+        }
+
+        &:hover,
+        .logo:hover {
+          cursor: pointer;
+        }
+      }
+
+      .phone:hover {
+        cursor: copy;
+      }
+    }
+
+    .right {
+      .hamburger {
+        width: 2vw;
+        height: 3vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+
+        div {
+          width: 100%;
+          height: 0.3vh;
+          background-color: $color4;
+          transform-origin: left;
+          transition: all 1.3s ease;
+        }
+      }
+    }
+  }
+
+  &.menu-open {
+    background-color: $color4;
+    .itemContainer,
+    .logo {
+      &:hover {
+        color: $color3;
+      }
+    }
+
+    .hamburger {
+      div {
+        &:first-child {
+          background-color: whitesmoke;
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:last-child {
+          background-color: whitesmoke;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}

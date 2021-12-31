@@ -1,0 +1,99 @@
+@import "../../global.scss";
+
+#home {
+  background-color: whitesmoke;
+  display: flex;
+
+  .header {
+    font-size: 15vw;
+    color: yellow;
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .right {
+    flex: 0.5;
+    position: relative;
+    overflow: hidden;
+
+    .wrapper {
+      width: 100%;
+      height: 100%;
+      padding-left: 2.75vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: $color4;
+
+      .btn {
+        display: inline-block;
+        width: 40%;
+        background-color: $color1;
+        color: whitesmoke;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 2.2vw;
+        padding: 1vw 0;
+      }
+
+      .btn:hover {
+        cursor: pointer;
+        background-color: $color6;
+      }
+
+      .write {
+        cursor: default;
+
+        h2 {
+          font-size: 2.75vw;
+          font-weight: normal;
+          margin: 1vh 0;
+
+          span {
+            font-weight: bold;
+            color: $color1;
+            text-transform: uppercase;
+
+            &:hover {
+              color: $color6;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .left {
+    flex: 0.5;
+    overflow: hidden;
+
+    .imgContainer {
+      width: 23vw;
+      height: 59vh;
+      margin-top: 15vh;
+      background-color: $color1;
+      border-radius: 3%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      float: right;
+
+      &:hover {
+        background-color: $color6;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  transition: margin 1s ease;
+  &.menu-open {
+    margin-left: -8.5vw;
+  }
+}
